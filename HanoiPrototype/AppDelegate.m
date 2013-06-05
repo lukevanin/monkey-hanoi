@@ -7,8 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import "GameDelegate.h"
+#import "GameViewController.h"
+#import "LevelViewController.h"
+
+@interface AppDelegate () <GameDelegate>
+
+@property (nonatomic, strong) UINavigationController * navigationController;
+
+@end
 
 @implementation AppDelegate
+
+@synthesize navigationController = _navigationController;
 
 - (void)dealloc
 {
@@ -18,7 +29,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self newGame];
+//    self.window.rootViewController = self.navigationController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							
@@ -47,6 +61,41 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (UINavigationController *)navigationController
+{
+    if (_navigationController) {
+        return _navigationController;
+    }
+    
+    _navigationController = [[UINavigationController alloc] init];
+    return _navigationController;
+}
+
+- (void)newGame
+{
+    [self selectLevel];
+}
+
+- (void)selectLevel
+{
+    LevelViewController * levelViewController = [[LevelViewController alloc] init];
+    levelViewController.gameDelegate = self;
+    self.window.rootViewController = levelViewController;
+}
+
+- (void)startGame:(NSUInteger)numberOfMonkeys
+{
+    GameViewController * gameViewController = [[GameViewController alloc] init];
+    gameViewController.gameDelegate = self;
+    gameViewController.numberOfMonkeys = numberOfMonkeys;
+    self.window.rootViewController = gameViewController;
+}
+
+- (void)exitGame
+{
+    [self selectLevel];
 }
 
 @end
