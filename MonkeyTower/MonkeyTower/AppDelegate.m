@@ -24,17 +24,13 @@
 @property (nonatomic, strong) MainViewController * mainViewController;
 @property (nonatomic, strong) AVAudioPlayer * audioPlayer;
 @property (nonatomic, assign) SystemSoundID buttonSoundID;
-//@property (nonatomic, strong) UINavigationController * navigationController;
 @property (nonatomic, strong) LoadingViewController * loadingViewController;
 
 @end
 
 @implementation AppDelegate
 
-//@synthesize navigationController = _navigationController;
 @synthesize numberOfMonkeys = _numberOfMonkeys;
-//@synthesize isGameInProgress = _isGameInProgress;
-//@synthesize isGamePaused = _isGamePaused;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -84,16 +80,6 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-//- (UINavigationController *)navigationController
-//{
-//    if (_navigationController) {
-//        return _navigationController;
-//    }
-//    
-//    _navigationController = [[UINavigationController alloc] init];
-//    return _navigationController;
-//}
 
 - (void)setSoundtrackURL:(NSURL *)url
 {

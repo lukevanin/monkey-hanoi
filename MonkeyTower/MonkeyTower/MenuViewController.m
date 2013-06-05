@@ -49,12 +49,6 @@
     [self.menuView.aboutButton addTarget:self.gameDelegate action:@selector(playButtonSoundEffect) forControlEvents:UIControlEventTouchDown];
     [self.menuView.aboutButton addTarget:self action:@selector(aboutButtonTapped) forControlEvents:UIControlEventTouchUpInside];
 
-//    if (self.gameDelegate.hasLocalPlayer) {
-//        self.menuView.showScores = YES;
-//    }
-//    else {
-//        self.menuView.showScores = NO;
-//    }
     [self updateScoresButton];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateScoresButton) name:GKPlayerAuthenticationDidChangeNotificationName object:nil];
 }

@@ -105,7 +105,6 @@
 {
     UILabel * output = [Factory createCaptionWithFontSize:18];
     output.numberOfLines = 1;
-//    output.textColor = [UIColor colorWithWhite:1.0 alpha:0.8];
     output.text = text;
     [output sizeToFit];
     return output;

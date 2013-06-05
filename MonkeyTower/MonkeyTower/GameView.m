@@ -17,8 +17,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        [self addSubview:self.backgroundView];
-        
         for (UIView * stumpView in self.stumpViews) {
             [self addSubview:stumpView];
         }
@@ -31,7 +29,6 @@
         [self addSubview:self.movesCaption];
         [self addSubview:self.timeLabel];
         [self addSubview:self.movesLabel];
-//        [self addSubview:self.scoresButton];
         [self addSubview:self.menuButton];
         [self addSubview:self.restartButton];
     }
@@ -150,16 +147,6 @@
     _movesLabel.textAlignment = NSTextAlignmentCenter;
     return _movesLabel;
 }
-
-//- (UIButton *)scoresButton
-//{
-//    if (_scoresButton) {
-//        return _scoresButton;
-//    }
-//    
-//    _scoresButton = [Factory createButton];
-//    return _scoresButton;
-//}
 
 - (UIButton *)menuButton
 {

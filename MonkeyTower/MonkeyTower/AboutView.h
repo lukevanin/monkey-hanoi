@@ -13,6 +13,5 @@
 @property (nonatomic, strong) UIImageView * backgroundView;
 @property (nonatomic, strong) UIButton * closeButton;
 @property (nonatomic, strong) UIScrollView * scrollView;
-//@property (nonatomic, strong) UITextView * textView;
 
 @end

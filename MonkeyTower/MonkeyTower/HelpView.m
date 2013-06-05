@@ -11,8 +11,6 @@
 
 @interface HelpView () <UIScrollViewDelegate>
 
-//@property (nonatomic, assign) BOOL isScrolling;
-
 @end
 
 @implementation HelpView 

@@ -10,7 +10,6 @@
 
 @interface GameView : UIView
 
-//@property (nonatomic, strong) UIImageView * backgroundView;
 @property (nonatomic, strong) UIView * topBarView;
 @property (nonatomic, strong) UIView * bottomBarView;
 @property (nonatomic, strong) NSArray * stumpViews;
@@ -22,6 +21,5 @@
 @property (nonatomic, strong) UILabel * movesLabel;
 @property (nonatomic, strong) UIButton * menuButton;
 @property (nonatomic, strong) UIButton * restartButton;
-//@property (nonatomic, strong) UIButton * scoresButton;
 
 @end

@@ -10,7 +10,6 @@
 
 @interface LevelView : UIView
 
-//@property (nonatomic, strong) UIImageView * backgroundView;
 @property (nonatomic, strong) UIImageView * bottomBarView;
 @property (nonatomic, strong) UIButton * menuButton;
 @property (nonatomic, strong) UIButton * startButton;

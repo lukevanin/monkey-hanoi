@@ -12,6 +12,4 @@
 
 @interface LoadingViewController : UIViewController
 
-//@property (nonatomic, strong) id <GameDelegate> gameDelegate;
-
 @end

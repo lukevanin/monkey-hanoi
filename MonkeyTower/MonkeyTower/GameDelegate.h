@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-//#define localPlayerDidChangeNotification @"localPlayerDidChange"
-
 @protocol GameDelegate <NSObject>
 
 @property (nonatomic, assign) NSUInteger numberOfMonkeys;

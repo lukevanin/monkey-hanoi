@@ -22,7 +22,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        [self addSubview:self.backgroundView];
         [self addSubview:self.stumpView];
         [self addSubview:self.bottomBarView];
         [self addSubview:self.menuButton];
@@ -114,13 +113,6 @@
     [self.instructionLabel sizeToFit];
     instructionLabelFrame = self.instructionLabel.frame;
 
-//    [self.countLabel sizeToFit];
-//    CGRect countLabelFrame = self.countLabel.frame;
-//    countLabelFrame.origin.x = 0;
-//    countLabelFrame.origin.y = instructionLabelFrame.origin.y + instructionLabelFrame.size.height + 5;
-//    countLabelFrame.size.width = self.bounds.size.width;
-//    self.countLabel.frame = countLabelFrame;
-    
     [self layoutMonkeys];
 }
 
